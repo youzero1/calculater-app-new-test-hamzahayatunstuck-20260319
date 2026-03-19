@@ -1,0 +1,33 @@
+{
+  "name": "next-calculator",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "db:migrate": "npm run typeorm migration:run -- -d ./src/lib/data-source.ts",
+    "db:generate": "npm run typeorm migration:generate -- ./src/migrations/init -d ./src/lib/data-source.ts"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sqlite3": "5.1.7",
+    "typeorm": "0.3.20",
+    "reflect-metadata": "0.2.1"
+  },
+  "devDependencies": {
+    "typescript": "5.4.5",
+    "@types/node": "20.12.7",
+    "@types/react": "18.2.74",
+    "@types/react-dom": "18.2.24",
+    "@types/sqlite3": "3.1.11",
+    "ts-node": "10.9.2",
+    "tailwindcss": "3.4.1",
+    "autoprefixer": "10.4.19",
+    "postcss": "8.4.38",
+    "@tailwindcss/forms": "0.5.7"
+  }
+}
